@@ -1,0 +1,70 @@
+young_threshold: 50
+old_threshold: 80
+
+AGE:
+  n_mixtures: 2
+  mixture_weights: [0.3333, 0.6667]
+  means: [50, 80]
+  stds: [15, 10]
+
+SEX:
+  probs: [0.5, 0.5]
+
+CCI:
+  young_threshold: 50
+  old_threshold: 80
+  probs:
+    YM: [0.4, 0.3, 0.3]
+    OM: [0.1, 0.3, 0.6]
+    YF: [0.5, 0.4, 0.1]
+    OF: [0.2, 0.4, 0.4]
+
+SPO2_OLD_MEAN:
+  young_threshold: 50
+  old_threshold: 80
+  SPO2_old_mean_std:
+    YM: [0.95, 0.03]
+    OM: [0.93, 0.03]
+    YF: [0.95, 0.02]
+    OF: [0.94, 0.03]
+
+SPO2_COVID_EFFECT:
+  young_threshold: 50
+  old_threshold: 80
+  SPO2_covid_effect:
+    Y: [0.02, 0.02]
+    O: [0.03, 0.02]
+
+SPO2_NEW_MEAN:
+  young_threshold: 50
+  old_threshold: 80
+  SPO2_new_mean_beta_params:
+    Y: [0.06, 0.05]
+    O: [0.06, 0.05]
+
+SPO2:
+  phi: 0.9
+  beta_precision: 1000
+  coef_treatment: 0.5
+
+A:
+  beta0: -3.0
+  beta_male: -0.05
+  beta_age: 0.25
+  beta_cci: 0.25
+  beta_spo2_probit: -1.0
+
+D:
+  beta0: -4.0
+  beta_male: 0.4
+  beta_age: 0.4
+  beta_cci: 0.3
+  beta_spo2_probit: -0.5
+  treatment_effect: -1.0
+
+CENS:
+  beta0: -6.5
+  beta_male: 1.2
+  beta_age: 1.2
+  beta_cci: 1.0
+  

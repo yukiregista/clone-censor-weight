@@ -1,0 +1,37 @@
+scenario1:
+  experiments:
+    - experimentA
+    - experimentB
+  experiment_settings:
+    experimentA:
+      - a1d1
+      - a0.5d1
+      - a2d1
+      - a4d1
+      - a8d1
+      - a1d0.5
+      - a1d2
+      - a1d4
+      - a1d8
+    experimentB:
+      - a1d1
+
+scenario2:
+  experiments:
+    - experimentC
+  experiment_settings:
+    experimentC:
+      - a1d1
+
+scenario3:
+  experiments:
+    - experimentD
+    - experimentE
+    - experimentF
+  experiment_settings:
+    experimentD:
+      - a1d1
+    experimentE:
+      - a1d1
+    experimentF:
+      - a1d1

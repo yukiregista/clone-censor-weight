@@ -1,0 +1,67 @@
+[project]
+name = "clone-censor-weight"
+version = "0.1.0"
+description = "Clone-censor-weight analysis for longitudinal observational data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "patsy",
+    "scipy",
+    "statsmodels>=0.14.4",
+]
+
+[project.optional-dependencies]
+research = [
+    "lifelines>=0.30.0",
+    "marimo>=0.23.2",
+    "matplotlib",
+    "networkx",
+    "plotly",
+    "pyyaml",
+    "scipy<=1.15.3",
+    "seaborn",
+    "tqdm",
+]
+dev = [
+    "pytest>=8.4.0",
+    "ruff",
+    "sphinx>=7,<8.2; python_version < '3.11'",
+    "sphinx>=8.2; python_version >= '3.11'",
+    "textalloc>=1.2.3",
+    "vulture",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# Include paper-simulation YAML files under the private research package.
+"ccw._research.configs" = ["*.yaml"]
+
+[dependency-groups]
+research = [
+    "lifelines>=0.30.0",
+    "marimo>=0.23.2",
+    "matplotlib",
+    "networkx",
+    "plotly",
+    "pyyaml",
+    "scipy<=1.15.3",
+    "seaborn",
+    "tqdm",
+]
+dev = [
+    { include-group = "research" },
+    "pytest>=8.4.0",
+    "ruff",
+    "sphinx>=7,<8.2; python_version < '3.11'",
+    "sphinx>=8.2; python_version >= '3.11'",
+    "textalloc>=1.2.3",
+    "vulture",
+]

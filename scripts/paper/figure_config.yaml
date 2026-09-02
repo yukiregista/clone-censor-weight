@@ -1,0 +1,25 @@
+global_style:
+  font_family: Arial
+  default_font_size: 12
+  dpi: 300
+
+bias_heatmap:
+  width_mm: 350
+  height_mm: 200
+  cmap: Reds
+  annotation_font_size: 12
+  label_font_size: 12
+  tick_font_size: 12
+  x_tick_rotation: 35
+
+sample_size_panels:
+  width_mm: 360
+  height_mm: 180
+  title_font_size: 14
+  label_font_size: 12
+  tick_font_size: 12
+
+experiment_legend:
+  width_mm: 360
+  height_mm: 20
+  font_size: 12
